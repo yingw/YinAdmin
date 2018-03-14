@@ -11,9 +11,11 @@ This README file is kind of TODO list, it will never be finish yet to have a con
 
 ## 1. Setup this Spring Boot Application
 
-Read this [Document](docs/01_Spring_Boot.md)
+Spring Boot is the baseline of our application. Read this [Document](docs/01_Spring_Boot.md).
 
-## Integrate with Node.js, NPM
+## 2. Integrate with Node.js, NPM
+
+To integrate with Node.js env, use [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin), and read this [Document](docs/02_frontend-maven-plugin.md).
 
 ## Ant Design Pro template
 

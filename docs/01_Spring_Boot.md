@@ -91,6 +91,11 @@ spring.data.rest.base-path=/api
 
 Finally, rebuild (for you choose DevTools) to hot deploy, or rerun to have a test at: http://localhost:8080/api/users
 
+Or use curl to test:
+```shell
+
+```
+
 ## TODO
 
 dependencies:
