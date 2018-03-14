@@ -1,6 +1,9 @@
 # Yīn Admin
 
-Purpose of this project is going to migrate multi web develop and operation skill and tools to have modern web application development blueprint.
+**A modern web admin template project to show how techniques works together.**
+
+Purpose of this project is going to migrate multi web develop and operation skills and tools to have a modern
+ web application development blueprint. Or take this as a kind of best practices.
 
 In summary, it will use mainly: Spring Boot, React, Cloud Service, etc.
 
@@ -100,7 +103,7 @@ JN, Jest, Code coverage.
 
 ## Elasticscearh
 
-## Moniting
+## Monitoring
 
 ## ELK
 
