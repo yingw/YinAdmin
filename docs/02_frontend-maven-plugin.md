@@ -1,8 +1,16 @@
 # Using frontend-maven-plugin to Integrate with Node.js
 
+## Install Node.js and NPM, or Yarn
+
+Go to it's official website: https://nodejs.org/en/ , and download LTS version Node.js, the NPM will be installed along with the Node.js.
+After installation, test with: `node -v` and `npm -v`.
+
+If you'd like to install `Yarn` (Optional, but recommended), go: https://yarnpkg.com/ and install it's newest version. Then test: `yarn -v`.
+
+
 ## Setup frontend-maven-plugin in pom.xml
 
-To use frontend-maven-plugin, define these properties in pom.xml `properties` section:
+To use frontend-maven-plugin, define these properties in pom.xml `properties` section: (check out it's newest version at [here](https://github.com/eirslett/frontend-maven-plugin/releases))
 ```xml
 <!-- for frontend plugins -->
 <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
@@ -119,7 +127,7 @@ Simply change the goals to `yarn` and `install-node-and-yarn`, and set `yarnDown
 
 ## create-react-app tool
 
-Before we can setup package.json, It's recommanded to use [create-react-app](https://github.com/facebook/create-react-app) tool to generate our first React application.
+Before we can setup package.json, It's recommended to use [create-react-app](https://github.com/facebook/create-react-app) tool to generate our first React application.
 
 **Install create-react-app tool**
 ```shell
@@ -157,5 +165,62 @@ Visit http://localhost:3000, you will see your `Welcome to React` text.
 
 To setup the `package.json` file, 
 
+Now copy the project source code created by create-react-app tool to our webapp/app/ folder.
+And don't copy the .gitignore file.
+
+```text
+│  package.json
+│  README.md
+│  yarn.lock
+│
+├─node_modules
+│      ...
+│
+├─public
+│      favicon.ico
+│      index.html
+│      manifest.json
+│
+└─src
+        App.css
+        App.js
+        App.test.js
+        index.css
+        index.js
+        logo.svg
+        registerServiceWorker.js
+```
 
 ## Copy resources
+
+plugin
+
+Checkout it's newest version at [here](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22maven-resources-plugin%22) or [here](https://maven.apache.org/plugins/maven-resources-plugin/download.cgi)
+
+```xml
+<!-- copy resource -->
+<plugin>
+    <artifactId>maven-resources-plugin</artifactId>
+    <version>3.0.2</version>
+    <executions>
+        <execution>
+            <id>Copy frontend production build to resources</id>
+            <phase>generate-resources</phase>
+            <goals>
+                <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+                <outputDirectory>${basedir}/target/classes/static</outputDirectory>
+                <resources>
+                    <resource>
+                        <directory>src/main/webapp/app/build/</directory>
+                        <filtering>true</filtering>
+                    </resource>
+                </resources>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+```
+
+build -> dist
