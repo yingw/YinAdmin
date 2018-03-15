@@ -7,10 +7,11 @@ After installation, test with: `node -v` and `npm -v`.
 
 If you'd like to install `Yarn` (Optional, but recommended), go: https://yarnpkg.com/ and install it's newest version. Then test: `yarn -v`.
 
+TODO: taobao repo
 
 ## Setup frontend-maven-plugin in pom.xml
 
-To use frontend-maven-plugin, define these properties in pom.xml `properties` section: (check out it's newest version at [here](https://github.com/eirslett/frontend-maven-plugin/releases))
+To use [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin), define these properties in pom.xml `properties` section: (check out it's newest version at [here](https://github.com/eirslett/frontend-maven-plugin/releases))
 ```xml
 <!-- for frontend plugins -->
 <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
@@ -62,9 +63,14 @@ This will:
 
 It's just a simple version, we will modify it later to use more complex tools to satisfy more situation.
 
+## Using Yarn
+
 Here, it use NPM to to the package things. If you'd like to ues [Yarn](https://yarnpkg.com) (which is faster package tool and recommanded).
 Simply change the goals to `yarn` and `install-node-and-yarn`, and set `yarnDownloadRoot` as `https://npm.taobao.org/mirrors/yarn/`.
+v1.5.1
 
+(change npm - run build, to yarn - build)
+workingDirectory
 > _Notice:_ The xxxDownloadRoot is just needed when you have issue on visiting the official download site such as in GFW of China.
 
 ## TODO

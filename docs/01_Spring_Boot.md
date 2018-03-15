@@ -3,7 +3,7 @@
 ## Setup project
 
 - Setup up this project using IDES's new project guide, or
-- Go to http://start.spring.io/ and create project using Spring Initializr.
+- Go to the [Spring Initializr](http://start.spring.io/) and create project.
 
 Select Spring Boot version 2.0.0.RELEASE (2018-3-14)
 

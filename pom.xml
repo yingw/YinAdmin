@@ -26,6 +26,7 @@
 		<frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
 		<node.version>v8.10.0</node.version>
 		<npm.version>5.6.0</npm.version>
+		<yarn.version>v1.5.1</yarn.version>
 	</properties>
 
 	<dependencies>
@@ -73,39 +74,42 @@
 				<version>${frontend-maven-plugin.version}</version>
 				<configuration>
 					<installDirectory>target</installDirectory>
-					<workingDirectory>src/main/webapp/app</workingDirectory>
+					<workingDirectory>src/main/webapp/ant-design-pro</workingDirectory>
 				</configuration>
 				<executions>
 					<execution>
-						<id>install node and npm</id>
+						<id>install node and yarn</id>
 						<goals>
-							<goal>install-node-and-npm</goal>
+							<goal>install-node-and-yarn</goal>
 						</goals>
 						<configuration>
 							<nodeVersion>${node.version}</nodeVersion>
-							<npmVersion>${npm.version}</npmVersion>
+							<yarnVersion>${yarn.version}</yarnVersion>
+							<!--<npmVersion>${npm.version}</npmVersion>-->
 							<nodeDownloadRoot>https://npm.taobao.org/mirrors/node/</nodeDownloadRoot>
-							<npmDownloadRoot>https://registry.npm.taobao.org/npm/-/</npmDownloadRoot>
+							<yarnDownloadRoot>https://npm.taobao.org/mirrors/yarn/</yarnDownloadRoot>
+							<!--<npmDownloadRoot>https://registry.npm.taobao.org/npm/-/</npmDownloadRoot>-->
 						</configuration>
 					</execution>
 
 					<execution>
-						<id>npm install</id>
+						<id>yarn install</id>
 						<goals>
-							<goal>npm</goal>
+							<goal>yarn</goal>
 						</goals>
 						<configuration>
-							<npmInheritsProxyConfigFromMaven>false</npmInheritsProxyConfigFromMaven>
+							<!--<npmInheritsProxyConfigFromMaven>false</npmInheritsProxyConfigFromMaven>-->
+							<yarnInheritsProxyConfigFromMaven>false</yarnInheritsProxyConfigFromMaven>
 						</configuration>
 					</execution>
 
 					<execution>
 						<id>build</id>
 						<goals>
-							<goal>npm</goal>
+							<goal>yarn</goal>
 						</goals>
 						<configuration>
-							<arguments>run build</arguments>
+							<arguments>build</arguments>
 						</configuration>
 					</execution>
 
@@ -126,7 +130,7 @@
 							<outputDirectory>${basedir}/target/classes/static</outputDirectory>
 							<resources>
 								<resource>
-									<directory>src/main/webapp/app/build/</directory>
+									<directory>src/main/webapp/ant-design-pro/dist/</directory>
 									<filtering>true</filtering>
 								</resource>
 							</resources>

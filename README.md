@@ -2,16 +2,23 @@
 
 **A modern web admin template project to show how techniques works together.**
 
-Purpose of this project is going to migrate multi web develop and operation skills and tools to have a modern
- web application development blueprint. Or take this as a kind of best practices.
+- First, the main purpose of this project is going to migrate multi web develop and operation skills and tools to have a modern
+ web application development blueprint.
+- And then, most important, to show you how to archive this step by step. You will learn a lot of Frontend and Backend development
+skills for a modern web application.
+- Some of the tools I choose might not be the most suitable of yours, then you can just take this tutorial as a kind of best practices.
+- Finally, it can also be treated as a free and open admin template for your project.
 
-In summary, it will use mainly: Spring Boot, React, Cloud Service, etc.
+In summary, it will use mainly: [Spring Boot](https://projects.spring.io/spring-boot/), React, [Cloud Service](https://en.wikipedia.org/wiki/Cloud_computing), etc.
 
 This README file is kind of TODO list, it will never be finish yet to have a continuous optimization.
 
+[TOC]
+
 ## 1. Setup this Spring Boot Application
 
-**Spring Boot** is the baseline of our application. Read this [Document](docs/01_Spring_Boot.md).
+[Spring Boot](https://projects.spring.io/spring-boot/) is the baseline of our application.
+Read this [Document](docs/01_Spring_Boot.md) to create our baseline application.
 
 Links:
 - [Spring Boot](https://projects.spring.io/spring-boot/)
@@ -19,16 +26,21 @@ Links:
 
 ## 2. Integrate with Node.js, NPM or Yarn
 
-To integrate with Node.js env, use **frontend-maven-plugin**, and read this [Document](docs/02_frontend-maven-plugin.md).
-- [Node.js]
-- [NPM]
-- [Yarn]
+To integrate with Node.js env, use [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin),
+and read this [Document](docs/02_frontend-maven-plugin.md).
+- [Node.js](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/)
+- [Yarn](https://yarnpkg.com/)
 - [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin)
+
+## Build React app with create-react-app
+- [React](https://reactjs.org/)
+- [create-react-app](https://github.com/facebook/create-react-app)
 
 ## Ant Design Pro template
 
-- [Ant Design]()
-- [Ant Design Pro]()
+- [Ant Design](https://ant.design/)
+- [Ant Design Pro](https://pro.ant.design/)
 
 ## Service Cache
 
@@ -38,11 +50,13 @@ Using spring cache.
 
 Frontend validation and Backend validation.
 
-## Setup Security
+## Security
 
 Using database.
 
 Using Social Login.
+
+- [Spring Security](https://projects.spring.io/spring-security)
 
 ## Messaging
 
@@ -159,3 +173,15 @@ Docs.
 ## Batch
 
 ## Mobile Frontend
+
+## Tools
+
+IntelliJ IDEA
+    Useful plugins
+Visual Studio Code
+    Useful plugins
+Maven (Taobao)
+JSONViewer
+Postman/newman
+BrowserSync
+
